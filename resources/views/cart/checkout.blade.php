@@ -20,7 +20,7 @@
             <div class="col-md-8">
                 <div class="container">
                     <h1><em>Check out <br><b>{{ $pago}}</b></em> <span class="{{$fa}}"></span> </h1>
-                    <h3><br> Información de envío loco</h3>
+                    <h3><br> Información de envío again</h3>
                 </div>
                 <form action="{{ route ('orders.store')}}" method="post" style="margin-top: 50px;" class="checkoutData">
                     @csrf
