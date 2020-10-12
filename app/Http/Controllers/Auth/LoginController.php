@@ -45,8 +45,6 @@ class LoginController extends Controller
 
     public function github ()
     {
-        // dd(Auth::guest());
-
         // send the users requests to github
         return Socialite::driver('github')->redirect();
 
@@ -56,8 +54,6 @@ class LoginController extends Controller
     {
         // get oauth request back from github
         $user = Socialite::driver('github')->stateless()->user();
-
-        // dd( $user);
 
         // register if not existing in DB
 
@@ -69,12 +65,8 @@ class LoginController extends Controller
             'role' => 0
         ]);
 
-        // // $user->role = 0;
-        // $user->save();
-
         Auth::login($user, true);
 
-        // dd (\Cart::getTotal());
 
         if (\Cart::getTotal() == 0.0) {
             return redirect('/');
@@ -85,8 +77,6 @@ class LoginController extends Controller
 
     public function facebook ()
     {
-        // dd(Auth::guest());
-
         // send the users requests to github
         return Socialite::driver('facebook')->redirect();
 
@@ -110,12 +100,7 @@ class LoginController extends Controller
             'role' => 0
         ]);
 
-        // $user->role = 0;
-        // $user->save();
-
         Auth::login($user, true);
-
-        // dd (\Cart::getTotal());
 
         if (\Cart::getTotal() == 0.0) {
             return redirect('/');

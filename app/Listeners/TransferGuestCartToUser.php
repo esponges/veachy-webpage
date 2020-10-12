@@ -27,7 +27,6 @@ class TransferGuestCartToUser
     public function handle(Login $event)
     {
         // dd (session('guest_cart.data'), \Cart::getContent());
-        // dd( session(($event->user->id != null) ? $event->user->id : 0 ));
         $userCart = \Cart::getContent();
         $userCartItems = $userCart->toArray();
 
@@ -56,7 +55,6 @@ class TransferGuestCartToUser
         }
 
         // dd($guestCartItems);
-        // if ($guestCart->isNotEmpty()) $userCart->add($guestCartItems);
 
         // $dbCart = \App\Cart::find(session('guest_cart.session') . '_cart_items'); // <- using DB storage for cart
 
