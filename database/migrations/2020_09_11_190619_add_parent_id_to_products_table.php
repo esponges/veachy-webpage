@@ -14,8 +14,8 @@ class AddParentIdToProductsTable extends Migration
     public function up()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->integer('parent_id')->unsigned()->nullable();
-            $table->foreign('parent_id')->references('id')->on('products')->onUpdate('cascade')->onDelete('set_null');
+            // $table->integer('parent_id')->unsigned()->nullable();
+            // $table->foreign('parent_id')->references('id')->on('products')->onUpdate('cascade')->onDelete('set_null');
         });
     }
 
@@ -27,7 +27,7 @@ class AddParentIdToProductsTable extends Migration
     public function down()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->dropIfExists('parent_id');
+            // $table->dropIfExists('parent_id');
         });
     }
 }

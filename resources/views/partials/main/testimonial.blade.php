@@ -6,16 +6,16 @@
             </div>
         </div>
         <div class="row">
-            @foreach ($igLinks as $link)
+            @for ($i=0; $i<$arrSize;$i++)
                 <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="testimonial text-center">
                         {{-- <p><em>&mdash; @vickycalleros</em></p>
                         --}}
                         @php
-                            echo $link;
+                            echo $igLinks[$i]->ig_link;
                         @endphp
                     </div>
                 </div>
-            @endforeach
+            @endfor
         </div>
 </section>

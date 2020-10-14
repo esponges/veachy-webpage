@@ -288,6 +288,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   <!-- <script src="js/jquery.waypoints.min.js"></script> -->
   <script src="{{ asset ('js/aos.js') }}"></script>
   <script src="{{ asset ('js/main.js') }}"></script>
-    <script async src="//www.instagram.com/embed.js"></script>
+    <script async src="{{URL::asset('//www.instagram.com/embed.js')}}"></script>
 
 </html>
