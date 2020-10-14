@@ -29,7 +29,7 @@
                 	<div class="col-4 site-logo" data-aos="fade"><a href="{{ route ('orders.index')}}"><em>Pedidos</em></a></div>
             	@endif
         	@endauth
-            
+
 
 
           <div class="site-menu-toggle js-site-menu-toggle"  data-aos="fade">
@@ -288,4 +288,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   <!-- <script src="js/jquery.waypoints.min.js"></script> -->
   <script src="{{ asset ('js/aos.js') }}"></script>
   <script src="{{ asset ('js/main.js') }}"></script>
+    <script async src="//www.instagram.com/embed.js"></script>
+
 </html>
