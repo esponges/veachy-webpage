@@ -8,8 +8,8 @@
       <div class="container">
           <div class="row site-hero-inner justify-content-center align-items-center">
           <div class="col-md-10 text-center">
-              <h1 class="heading" style="margin-top: 100px;" data-aos="fade-up"><em>Bienvenida</em> </h1>
-              <p class="sub-heading mb-5" data-aos="fade-up" data-aos-delay="100">Discover our world-class hotel &amp; restaurant resort.</p>
+              <h1 class="heading" style="margin-top: 100px;" data-aos="fade-up">Veachy Swimwear </h1>
+              <p class="sub-heading mb-5" data-aos="fade-up" data-aos-delay="100">𝘽𝙚 𝙘𝙤𝙣𝙛𝙞𝙙𝙚𝙣𝙩, 𝙗𝙚 𝙨𝙚𝙭𝙮, 𝙗𝙚 𝙑𝙚𝙖𝙘𝙝𝙮</p>
               {{-- <p data-aos="fade-up" data-aos-delay="100"><a href="https://www.instagram.com/veachy_swimwear" class="btn uppercase btn-primary btn-block mr-md-2 mr-0 mb-3 d-sm-inline">Follow Us<span class="fa fa-instagram"></span></a></p>
               <p class="sub-heading mb-5" data-aos="fade-up" data-aos-delay="100"></p>
               <p data-aos="fade-up" data-aos-delay="100"><a href="https://wa.me/5213323633343" class="btn uppercase btn-light btn-block mr-md-2 mr-0 mb-3 d-sm-inline" style="background-color: green; ">WhatsApp <span class="fa fa-whatsapp"></span></a></p>
@@ -30,7 +30,11 @@
         <div class="row mb-5">
         <div class="col">
             <div class="iframe-container ">
-            <iframe src="https://www.youtube.com/embed/a1aCwrR_DNU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/tllv2ppqSrs"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    mute="1"
+                    allowfullscreen></iframe>
             </div>
         </div>
         </div>
