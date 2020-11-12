@@ -45,7 +45,7 @@
                     <div class="col-md-8">
                         <p class="txt" data-aos="fade-up" data-aos-delay="100">
                             <a href="{{ route ('get.product', $product->id)}}" class="btn btn-primary">
-                            <em>Tallas y colores&nbsp;&nbsp;&nbsp;</em><span class="fa fa-diamond"></span></a>
+                            <em>Tallas y colores&nbsp;&nbsp;&nbsp;</em></a>
                         </p>
                     </div>
                 </div>
@@ -94,7 +94,7 @@
                     <div class="col-md-8">
                         <p class="txt" data-aos="fade-up" data-aos-delay="100">
                             <a href="{{ route ('get.product', $product->id)}}" class="btn btn-primary">
-                            <em>Tallas y colores&nbsp;&nbsp;&nbsp;</em><span class="fa fa-diamond"></span></a>
+                            <em>Tallas y colores&nbsp;&nbsp;&nbsp;</em></a>
                         </p>
                     </div>
                 </div>
@@ -142,7 +142,7 @@
                     <div class="col-md-8">
                         <p class="txt" data-aos="fade-up" data-aos-delay="100">
                             <a href="{{ route ('get.product', $product->id)}}" class="btn btn-primary">
-                            <em>Tallas y colores&nbsp;&nbsp;&nbsp;</em><span class="fa fa-diamond"></span></a>
+                            <em>Tallas y colores&nbsp;&nbsp;&nbsp;</em></a>
                         </p>
                     </div>
                 </div>

@@ -20,7 +20,7 @@ body {
                                     @php
                                         $photo = $item->name . ' ' . $item->color .  $item->total_fotos . '.jpg'
                                     @endphp
-                                    <img src="/img/product/<?php echo $photo; ?>" alt="/img/product/<?php echo $photo; ?>" class="img-fluid">
+                                    <img src="/img/product/<?php echo $item->id . '.jpg'; ?>" alt="/img/product/<?php echo $item->id  . '.jpg'; ?>" class="img-fluid">
                                     {{-- <p>/img/product/<?php echo $photo; ?></p> --}}
                                     <div class="container mb-1" style="margin: 5% 0% 5% 0%;">
                                         <h1 class="card-text">${{ $item->price}} <br>

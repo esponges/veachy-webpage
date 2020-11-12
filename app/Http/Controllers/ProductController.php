@@ -13,6 +13,7 @@ class ProductController extends Controller
 
         $parentProduct = Product::find($id);
         $children = $parentProduct->children;
+        // dd ($children);
         // $children = Product::get();
         // dd($types,$product);
 
