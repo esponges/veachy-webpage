@@ -14,7 +14,7 @@ class AddBuyerEmailToOrders extends Migration
     public function up()
     {
         Schema::table('orders', function (Blueprint $table) {
-            $table->string('buyer_email');
+            $table->string('buyer_email')->nullable();
         });
     }
 

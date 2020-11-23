@@ -7,6 +7,7 @@ use Tests\TestCase;
 
 class ExampleTest extends TestCase
 {
+    use RefreshDatabase;
     /**
      * A basic test example.
      *
@@ -14,8 +15,12 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
+        $this->withExceptionHandling();
+
         $response = $this->get('/');
 
         $response->assertStatus(200);
+
+        $response->assertViewIs('index');
     }
 }
