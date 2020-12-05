@@ -18,12 +18,12 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', 'ProductController@index')->name('index');
-Route::get('/inventory', 'ProductController@show')->middleware('auth');
+Route::get('/inventory', 'ProductController@show')->name('inventory')->middleware('auth');
+Route::get('/inventory/create', 'ProductController@create')->middleware('auth');
+Route::post('/inventory/store', 'ProductController@store')->name('product.store');
 Route::get('/inventory/{id}/edit', 'ProductController@edit')->middleware('auth');
 Route::put('/inventory/{id}/edit', 'ProductController@update')->middleware('auth');
 Route::delete('/delete/{id}', 'ProductController@destroy')->name('inventory.destroy')->middleware('auth');
-Route::get('/inventory/create', 'ProductController@create')->middleware('auth');
-Route::put('/inventory/create', 'ProductController@store')->middleware('auth');
 Route::get('/product/{id}', 'ProductController@get')->name('get.product');
 
 

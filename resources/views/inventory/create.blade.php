@@ -2,47 +2,78 @@
 
 <style>
     body {
-        background-color:rgb(230, 189, 224) !important;
+        background-color: rgb(230, 189, 224) !important;
     }
-    </style>
+
+</style>
 
 @section('content')
-<div class="container" style="margin-top:150px;">
-    {!! Form::open(['action' => 'ProductController@create','method' => 'POST']) !!}
-    <div class="form group">
-        {{ Form::label('name', 'Nombre')}} <br>
-        {{ Form::text('name', '',['class'=>'form-control', 'placeholder' => 'Inserta nombre'])}}
+    <div class="container" style="margin-top:150px;">
+        <form action="{{ route('product.store') }}" method="post" enctype="multipart/form-data" id="form-upload">
+            @csrf
+            <div class="form-group">
+                <label for="">Producto</label>
+                <input type="text" name="name" class="form-control" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="">Descripción (sólo para productos principales)</label>
+                <input type="text" name="description" class="form-control" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="">Precio</label>
+                <input type="number" name="price" class="form-control" placeholder="">
+            </div>
+            <div class="form-group">
+                <input type="hidden" name="disponibilidad" value="1">
+            </div>
+            <div class="form-group">
+                <label for="">Type</label>
+                <select class="form-control" name="type">
+                    <option value="1">Carrusel</option>
+                    <option value="4">Producto</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="">Tipo-detalle</label>
+                <select class="form-control" name="type_detail">
+                    <option value="1">Bikini</option>
+                    <option value="2">Cover Up</option>
+                    <option value="3">Entero</option>
+                </select>
+            </div>
+            {{-- <div class="form-group">
+                <label for="">Fotos</label>
+                <input type="number" name="total_fotos" class="form-control" placeholder="">
+            </div> --}}
+            <div class="form-group">
+                <label for="">Parent product</label>
+                <select class="form-control" name="parent_id">
+                    <option value="">Ninguno</option>
+                    @foreach ($products as $product)
+                        <option value="{{$product->id}}">{{$product->name}}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="">Tamaño</label>
+                <select class="form-control" name="size" id="product-type">
+                    <option value="1">Chico</option>
+                    <option value="2">Mediano</option>
+                    <option value="3">Grande</option>
+                    <option value="4">Extra-chico</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="">Color</label>
+                <input type="text" name="color" class="form-control" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="">Fotos</label><br>
+                <label for="">Recuerda que los subproductos pueden no llevar imagen</label>
+                <input id="file" type="file" class="form-control @error('file') is-invalid @enderror" name="files[]"
+                    value="{{ old('file') }}" multiple>
+            </div>
+            <button type="submit" class="btn btn-primary">Subir producto</button>
+        </form>
     </div>
-    <div class="form group">
-        {{ Form::label('description', 'Descripción')}} <br>
-        {{ Form::textarea('description', '',['class'=>'form-control', 'placeholder' => 'Color - talla'])}}
-    </div>
-    <div class="form group">
-        {{ Form::label('price', 'Precio')}} <br>
-        {{ Form::text('price', '',['class'=>'form-control', 'placeholder' => 'precio'])}}
-    </div>
-    <div class="form group">
-        {{ Form::label('disponibilidad', 'Disponibilidad')}} <br>
-        {{ Form::text('disponibilidad', '',['class'=>'form-control', 'placeholder' => '0 = agotado, 1 = disponible'])}}
-    </div>
-    <div class="form group">
-        {{ Form::label('type', 'Tipo')}} <br>
-        {{ Form::text('type', '',['class'=>'form-control', 'placeholder' => '1 = bikinis, 2 = salidas, 3 = enteros, 4 = subtipo'])}}
-    </div>
-    <div class="form group">
-        {{ Form::label('total_fotos', 'Total fotos')}} <br>
-        {{ Form::text('total_fotos', '',['class'=>'form-control', 'placeholder' => 'total fotos en número'])}}
-    </div>
-    {{-- <div class="form group">
-        {{ Form::label('mlink', 'MercadoLibre hl')}} <br>
-        {{ Form::text('mlink', '',['class'=>'form-control', 'placeholder' => 'your title here'])}}
-    </div> --}}
-    <div>
-        {{Form::hidden('_method','PUT')}}
-        {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
-        {{-- Will create a request to store method --}}
-    </div>
-    {!! Form::close() !!}
-</div>
-
 @endsection
