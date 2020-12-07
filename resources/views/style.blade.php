@@ -22,7 +22,7 @@
 
 <header class="site-header">
     <div class="row">
-        <div class="col-2 site-logo" data-aos="fade"><a href="/"><em>Veachy Swimwear</em></a></div>
+        <div class="col site-logo" data-aos="fade"><a href="/"><em>Veachy Swimwear</em></a></div>
         @auth
             @if (auth()->user()->role == 1)
                 <div class="col-2" data-aos="fade"><a href="{{ route('inventory') }}"><em>Inventario</em></a>
