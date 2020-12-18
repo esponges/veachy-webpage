@@ -193,4 +193,9 @@ class ProductController extends Controller
             return back();
         }
     }
+
+    public function getGallery()
+    {
+        return view('inventory.gallery');
+    }
 }

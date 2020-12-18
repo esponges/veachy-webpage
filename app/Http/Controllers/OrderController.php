@@ -16,6 +16,7 @@ class OrderController extends Controller
      */
     public function index()
     {
+        dd(\Cart::getContent());
         $orders = Order::orderBy('updated_at','desc')->paginate(20);;
 
         return view('orders.index', compact('orders'));
