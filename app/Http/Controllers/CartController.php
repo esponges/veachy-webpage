@@ -12,7 +12,6 @@ class CartController extends Controller
 
 
         $cartItems = \Cart::getContent();
-        dd ($cartItems);
 
         return view ('cart.index', compact ('cartItems'));
     }
