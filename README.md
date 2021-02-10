@@ -1,2 +1,4 @@
 # veachy5oct
- Veachy webpage
+ First version of Veachyswimwear.com webpage.
+
+All Laravel backend + blade front end.
